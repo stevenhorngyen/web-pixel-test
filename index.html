@@ -32,6 +32,9 @@
 document.getElementById("cpButton").onclick = function(){
     ttq.identify({
     phone: document.getElementById("emailInput").value,
+    email: document.getElementById("emailInput").value,
+    sha256_email: document.getElementById("emailInput").value,
+    sha256_phone: document.getElementById("emailInput").value,
 })
     ttq.track('CompletePayment',{  
     content_id: '301',
