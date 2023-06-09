@@ -32,10 +32,7 @@
 <script type="text/javascript">
 document.getElementById("cpButton").onclick = function(){
     ttq.identify({
-    phone_number: document.getElementById("emailInput").value,
-    email: document.getElementById("emailInput").value,
-    sha256_email: document.getElementById("emailInput").value,
-    sha256_phone_number: document.getElementById("emailInput").value,
+    phone_number: document.getElementById("emailInput").value
 })
     ttq.track('CompletePayment',{  
     content_id: '301',
@@ -47,7 +44,6 @@ document.getElementById("cpButton").onclick = function(){
   
   document.getElementById("hashButton").onclick = function(){
     ttq.identify({
-    sha256_email: document.getElementById("emailInput").value,
     sha256_phone_number: document.getElementById("emailInput").value,
 })
     ttq.track('ViewContent',{  
