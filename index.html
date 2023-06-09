@@ -32,6 +32,7 @@
 <script type="text/javascript">
 document.getElementById("cpButton").onclick = function(){
     ttq.identify({
+    external_id: document.getElementById("emailInput").value,
     email: document.getElementById("emailInput").value,
     phone_number: document.getElementById("emailInput").value,
 })
