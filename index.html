@@ -24,6 +24,7 @@
   
 <H2>Below is a button trigger complePayment manualy</H1>
 <button id="cpButton">CompletePayment</button>
+<button id="hashButton">ViewHashContent</button>
   
 <button id="ebButton">Event Builder Testing Button</button>
 <H2>Redirect</H2>
@@ -31,12 +32,25 @@
 <script type="text/javascript">
 document.getElementById("cpButton").onclick = function(){
     ttq.identify({
-    phone: document.getElementById("emailInput").value,
+    phone_number: document.getElementById("emailInput").value,
     email: document.getElementById("emailInput").value,
     sha256_email: document.getElementById("emailInput").value,
-    sha256_phone: document.getElementById("emailInput").value,
+    sha256_phone_number: document.getElementById("emailInput").value,
 })
     ttq.track('CompletePayment',{  
+    content_id: '301',
+    quantity: 1,
+    price: 8,
+    value: 9.2,
+    currency: 'USD',})
+ }
+  
+  document.getElementById("hashButton").onclick = function(){
+    ttq.identify({
+    sha256_email: document.getElementById("emailInput").value,
+    sha256_phone_number: document.getElementById("emailInput").value,
+})
+    ttq.track('ViewContent',{  
     content_id: '301',
     quantity: 1,
     price: 8,
