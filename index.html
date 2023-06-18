@@ -21,6 +21,8 @@
 <H1> THIS IS A TETING PAGE FOR TIKTOK PIXEL DEVELOPER MODE SETUP</H1>
 <H2>Below is a inputbox for email</H2>
 <input id="emailInput" type="text" value="Enter your email here" />
+<input id="demo ttclid" type="text" value="ttclid value" />
+<input id="demo ttp" type="text" value="cookie id value" />
   
 <H2>Below is a button trigger complePayment manualy</H1>
 <button id="cpButton">CompletePayment</button>
@@ -58,6 +60,22 @@ document.getElementById("cpButton").onclick = function(){
     brand: 'Nike',
     currency: 'USD',})
  }
+  
+  function getCookie(name) {
+  let cookie = {};
+  document.cookie.split(';').forEach(function(el) {
+    let [k,v] = el.split('=');
+    cookie[k.trim()] = v;
+  })
+  return cookie[name];
+}
+  
+  var ttclid = getCookie('ttclid')// TikTok Click ID
+  var ttp = getCookie('_ttp')//Cookie id
+  document.getElementById("demo").innerHTML = ttclid;
+  document.getElementById("demo").innerHTML = ttp;
+  
+  
 </script>
 
 
