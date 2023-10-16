@@ -41,9 +41,9 @@
 <script type="text/javascript">
 document.getElementById("cpButton").onclick = function(){
     ttq.identify({
-    external_id: document.getElementById("externalInput").value,
     email: document.getElementById("emailInput").value,
     phone_number: document.getElementById("phoneInput").value,
+    external_id: document.getElementById("externalInput").value,
 })
     ttq.track('CompletePayment',{  
     content_id: '301',
