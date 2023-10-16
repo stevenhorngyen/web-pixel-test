@@ -26,6 +26,8 @@
 <H1> THIS IS A TETING PAGE FOR TIKTOK PIXEL DEVELOPER MODE SETUP</H1>
 <H2>Below is a inputbox for email</H2>
 <input id="emailInput" type="text" value="Enter your email here" />
+<input id="externalInput" type="text" value="Enter your external id here" />
+<input id="phoneInput" type="text" value="Enter your phone here" />
 <input id="demo ttclid" type="text" value="ttclid value" />
 <input id="demo ttp" type="text" value="cookie id value" />
   
@@ -39,9 +41,9 @@
 <script type="text/javascript">
 document.getElementById("cpButton").onclick = function(){
     ttq.identify({
-    external_id: document.getElementById("emailInput").value,
+    external_id: document.getElementById("externalInput").value,
     email: document.getElementById("emailInput").value,
-    phone_number: document.getElementById("emailInput").value,
+    phone_number: document.getElementById("phoneInput").value,
 })
     ttq.track('CompletePayment',{  
     content_id: '301',
@@ -54,8 +56,9 @@ document.getElementById("cpButton").onclick = function(){
   
   document.getElementById("hashButton").onclick = function(){
     ttq.identify({
-    sha256_phone_number: document.getElementById("emailInput").value,
-    sha256_email: document.getElementById("emailInput").value,
+    phone_number: document.getElementById("phoneInput").value,
+    email: document.getElementById("emailInput").value,
+    external_id: document.getElementById("externalInput").value,
 })
     ttq.track('ViewContent',{  
     content_id: '301',
