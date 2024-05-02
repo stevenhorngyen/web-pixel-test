@@ -42,13 +42,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <H2>Redirect</H2>
 <a href="./GTM.html">Go to GOOGLE TAG MANAGER SETUP</a>
 <script type="text/javascript">
-document.getElementById("cpGTMButton").onclick("dataLayer.push({
+document.getElementById("cpGTMButton").onclick = function(){dataLayer.push({
     'event': 'CompletePayment',
     'bookCategory': 'fiction',
     'bookTitle': 'Cien años de soledad',
     'bookAuthor': 'Gabriel García Márquez'
-});")
-document.getElementById("cpButton").onclick = function(){
+})}
+  document.getElementById("cpButton").onclick = function(){
     ttq.identify({
     email: document.getElementById("emailInput").value,
     phone_number: document.getElementById("phoneInput").value,
