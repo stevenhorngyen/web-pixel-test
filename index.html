@@ -2,7 +2,12 @@
 
 <HEAD>
 
+  
 <TITLE>DEVELOPER MODE</TITLE>
+<script>
+    window.dataLayer = window.dataLayer || [];
+</script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -10,6 +15,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NDRMZ9SD');</script>
 <!-- End Google Tag Manager -->  
+
+  
 </HEAD>
 
 <BODY BGCOLOR="FFFFFF">
@@ -28,13 +35,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <input id="demo ttp" type="text" value="cookie id value" />
   
 <H2>Below is a button trigger complePayment manualy</H1>
-<button id="cpButton">CompletePayment</button>
+<button id="cpGTMButton">CompletePayment</button>
 <button id="hashButton">ViewHashContent</button>
   
 <button id="ebButton">Event Builder Testing Button</button>
 <H2>Redirect</H2>
 <a href="./GTM.html">Go to GOOGLE TAG MANAGER SETUP</a>
 <script type="text/javascript">
+document.getElementById("cpGTMButton").onclick("dataLayer.push({
+    'event': 'CompletePayment',
+    'bookCategory': 'fiction',
+    'bookTitle': 'Cien años de soledad',
+    'bookAuthor': 'Gabriel García Márquez'
+});")
 document.getElementById("cpButton").onclick = function(){
     ttq.identify({
     email: document.getElementById("emailInput").value,
