@@ -54,14 +54,14 @@ document.getElementById("cpButton").onclick = function(){
     ttq.identify({
     email: document.getElementById("emailInput").value,
     phone_number: document.getElementById("phoneInput").value,
-    })
+    });
     ttq.track('CompletePayment',{  
     content_id: '301',
     quantity: 1,
     price: 8,
     value: 9.2,
     brand: 'Nike',
-    currency: 'USD',})
+    currency: 'USD',});
 }
   
   document.getElementById("hashButton").onclick = function(){
@@ -69,14 +69,14 @@ document.getElementById("cpButton").onclick = function(){
     phone_number: document.getElementById("phoneInput").value,
     email: document.getElementById("emailInput").value,
     external_id: document.getElementById("externalInput").value,
-    })
+    });
     ttq.track('ViewContent',{  
     content_id: '301',
     quantity: 1,
     price: 8,
     value: 9.2,
     brand: 'Nike',
-    currency: 'USD',})
+    currency: 'USD',});
  }
   
   function getCookie(name) {
@@ -88,8 +88,8 @@ document.getElementById("cpButton").onclick = function(){
   return cookie[name];
 }
   
-  var ttclid = getCookie('ttclid')// TikTok Click ID
-  var ttp = getCookie('_ttp')//Cookie id
+  var ttclid = getCookie('ttclid');// TikTok Click ID
+  var ttp = getCookie('_ttp');//Cookie id
   document.getElementById("demo ttclid").value = ttclid;
   document.getElementById("demo ttp").value = ttp;
   
