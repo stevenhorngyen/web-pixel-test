@@ -1,27 +1,27 @@
 <HTML>
 
 <HEAD>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WB42SJHK');</script>
+<!-- End Google Tag Manager -->
   
 <TITLE>DEVELOPER MODE</TITLE>
 <script>
     window.dataLayer = window.dataLayer || [];
 </script>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NDRMZ9SD');</script>
-<!-- End Google Tag Manager -->  
+
 
   
 </HEAD>
 
 <BODY BGCOLOR="FFFFFF">
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDRMZ9SD"
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB42SJHK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <HR>
@@ -43,12 +43,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="./GTM.html">Go to GOOGLE TAG MANAGER SETUP</a>
 <script type="text/javascript">
 document.getElementById("cpGTMButton").onclick = function(){
+  dataLayer.push({ ecommerce: null });
   dataLayer.push({
-    'event': 'CompletePayment',
-    'bookCategory': 'fiction',
-    'bookTitle': 'Cien años de soledad',
-    'bookAuthor': 'Gabriel García Márquez'
-  })
+    event: "purchase",
+    user_data: {
+      sha256_email_address: '0c7e6a405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b',
+      sha256_phone_number: '123456405862e402eb76a70f8a26fc732d07c32931e9fae9ab1582911d2e8a3b',
+      address: {
+        "sha256_first_name": "4f23798d92708359b734a18172c9c864f1d48044a754115a0d4b843bca3a5332",
+        "sha256_last_name": "fd53ef835b15485572a6e82cf470dcb41fd218ae5751ab7531c956a2a6bcd3c7",
+        "city": "City Town",
+        "region": "CA",
+        "postal_code": "54321",
+        "country": "US"
+      }
+    },
+    ecommerce: {
+        transaction_id: "T_12345",
+        value: 200.0,
+        currency: "USD",
+        items: [
+          {
+            item_id: "SKU_12345",
+            item_name: "Fancy-MaxSpeed2.0 Black",
+            item_brand: "Fancy Sneakers",
+            item_category: "Shoes - Running Shoes",
+            price: 100.0,
+            quantity: 2
+          }
+        ]
+      }
+});
 }
 document.getElementById("cpButton").onclick = function(){
     ttq.identify({
